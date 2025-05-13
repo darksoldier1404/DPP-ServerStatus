@@ -1,0 +1,42 @@
+name: Fetch All Server Statuses
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # 매시간 정각 실행
+  workflow_dispatch:
+
+jobs:
+  fetch-statuses:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Read servers.json and fetch statuses
+        run: |
+          mkdir -p data
+          echo "[" > data/output.json
+          first=true
+          for server in $(jq -r '.servers[]' servers.json); do
+            echo "Fetching: $server"
+            response=$(curl -s "https://api.mcstatus.io/v2/status/java/$server")
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo "," >> data/output.json
+            fi
+            echo "$response" >> data/output.json
+          done
+          echo "]" >> data/output.json
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/output.json
+          git commit -m "Update server statuses [$(date '+%Y-%m-%d %H:%M:%S')]" || echo "No changes to commit"
+          git push
