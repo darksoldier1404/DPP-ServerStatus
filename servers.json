@@ -1,28 +1,7 @@
 {
   "servers": [
-    "choyadino1.mcv.kr",
-    "kartpoke1.mcv.kr",
-    "mc.hamuin.com",
-    "test1.dpnw.site",
-    "test2.dpnw.site",
-    "test3.dpnw.site",
-    "test4.dpnw.site",
-    "test5.dpnw.site",
-    "test6.dpnw.site",
-    "test7.dpnw.site",
-    "test8.dpnw.site",
-    "test9.dpnw.site",
-    "test10.dpnw.site",
-    "test11.dpnw.site",
-    "test12.dpnw.site",
-    "test13.dpnw.site",
-    "test14.dpnw.site",
-    "test15.dpnw.site",
-    "test16.dpnw.site",
-    "test17.dpnw.site",
-    "test18.dpnw.site",
-    "test19.dpnw.site",
-    "test20.dpnw.site",
-    "test21.dpnw.site"
+    "officeserver1.mcv.kr",
+    "officeserver2.mcv.kr",
+    "mc.hamuin.com"
   ]
 }
