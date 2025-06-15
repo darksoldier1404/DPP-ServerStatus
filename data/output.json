@@ -1,7 +1,7 @@
 [
-{"online":false,"host":"officeserver1.mcv.kr","port":25565,"ip_address":"172.104.117.229","eula_blocked":false,"retrieved_at":1750007038232,"expires_at":1750007098232,"srv_record":null}
+{"online":false,"host":"officeserver1.mcv.kr","port":25565,"ip_address":"172.104.117.14","eula_blocked":false,"retrieved_at":1750010741323,"expires_at":1750010801323,"srv_record":null}
 ,
-{"online":false,"host":"officeserver2.mcv.kr","port":25565,"ip_address":"172.104.117.229","eula_blocked":false,"retrieved_at":1750007040144,"expires_at":1750007100144,"srv_record":null}
+{"online":false,"host":"officeserver2.mcv.kr","port":25565,"ip_address":"172.104.117.190","eula_blocked":false,"retrieved_at":1750010743946,"expires_at":1750010803946,"srv_record":null}
 ,
-{"online":false,"host":"mc.hamuin.com","port":25565,"ip_address":null,"eula_blocked":false,"retrieved_at":1750006996232,"expires_at":1750007056232,"srv_record":null}
+{"online":false,"host":"mc.hamuin.com","port":25565,"ip_address":null,"eula_blocked":false,"retrieved_at":1750010745595,"expires_at":1750010805595,"srv_record":null}
 ]
